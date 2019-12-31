@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Happy First</string>
+    <string name="todo">TODO</string>
+    <string name="enter_name">ENTER NAME</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+
+    <string name="category">CATEGORY</string>
+    <string name="submit">SUBMIT</string>
+
+    <string name="user">ENTER USER</string>
+    <string name="password">ENTER PASSWORD</string>
+    <string name="signin">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="i_have_an_acount">I HAVE AN ACOUNT</string>
+    <string name="welcome_to_happy_first">Welcome To Happy First!</string>
+    <string name="i_am_guest">I AM GUEST</string>
+    <string name="enter_surname">ENTER SURNAME</string>
+    <string name="enter_password">ENTER PASSWORD</string>
+    <string name="rudo_moyo">Rudo Moyo</string>
+
+
+</resources>
