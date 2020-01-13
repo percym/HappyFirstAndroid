@@ -1,6 +1,7 @@
 package zw.co.researchhub.happyfirst;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        HappyFirstDatabase database = Room.databaseBuilder(this, HappyFirstDatabase.class, CONSTANTS.HAPPY_FIRST)
+                .allowMainThreadQueries()
+                .build();
         final Button submitButton;
         submitButton = findViewById(R.id.submit_btn);
         submitButton.setOnClickListener(v -> {

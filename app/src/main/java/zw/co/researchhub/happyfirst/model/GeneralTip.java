@@ -9,7 +9,6 @@ import java.io.Serializable;
 import lombok.Data;
 
 @Entity(tableName="general_tips")
-@Data
 public class GeneralTip   implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
@@ -25,5 +24,38 @@ public class GeneralTip   implements Serializable {
     private Boolean viewed;
 
 //    @Embedded(prefix = "mylist_array") private ArrayList<MyListItems> myListItems;
+
+
+    public int getGen_tip_id() {
+        return gen_tip_id;
+    }
+
+    public void setGen_tip_id(int gen_tip_id) {
+        this.gen_tip_id = gen_tip_id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Boolean getViewed() {
+        return viewed;
+    }
+
+    public void setViewed(Boolean viewed) {
+        this.viewed = viewed;
+    }
 }
 

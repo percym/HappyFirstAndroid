@@ -46,7 +46,7 @@ public interface GeneralTipDao {
     void delete(GeneralTip... generalTip);      // Note... is varargs, here note is an array
 
 
-    @Query("SELECT * FROM " + CONSTANTS.GENERAL_TIPS_TABLE +  " WHERE id = :id")
-    public GeneralTip getItemById(Long id);
+    @Query("SELECT * FROM " + CONSTANTS.GENERAL_TIPS_TABLE +  " WHERE gen_tip_id = :id")
+    public GeneralTip getGeneralTipById(Long id);
 
 }
