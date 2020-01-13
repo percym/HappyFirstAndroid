@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         HappyFirstDatabase database = Room.databaseBuilder(this, HappyFirstDatabase.class, CONSTANTS.HAPPY_FIRST)
                 .allowMainThreadQueries()
                 .build();
-        final Button submitButton;
+
         submitButton = findViewById(R.id.submit_btn);
         submitButton.setOnClickListener(v -> {
 

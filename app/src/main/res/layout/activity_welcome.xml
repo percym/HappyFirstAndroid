@@ -6,109 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".Welcome">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_t2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
-
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:text="@string/welcome_to_happy_first"
+        android:textAlignment="center"
+        android:textColor="@color/dark_Blue"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="30dp" />
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="0dp"
-        android:layout_height="800dp"
-
-
+        android:layout_width="400dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/ic_all_we_have_is_a_happy_period"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_t3" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        android:paddingTop="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="30dp"/>
 
     <Button
-        android:id="@+id/reg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/register"
+        android:layout_width="218dp"
+        android:layout_height="53dp"
         android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/button_blue"
         android:text="@string/sign_up"
-        android:importantForAutofill="no"
-
         android:padding="16dp"
-
         android:textColor="@color/orange"
-        app:layout_constraintEnd_toStartOf="@id/guideline_w2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline_w1"
-        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon"/>
 
     <Button
         android:id="@+id/sign"
-
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="218dp"
+        android:layout_height="53dp"
         android:background="@drawable/my_border"
-      android:text="@string/i_have_an_acount"
-
-
         android:padding="16dp"
+        android:text="@string/i_have_an_acount"
         android:textColorHint="@color/orange"
-        app:layout_constraintEnd_toStartOf="@id/guideline_w2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline_w1"
-        app:layout_constraintTop_toBottomOf="@id/reg" />
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:text="@string/welcome_to_happy_first"
-        android:textColor="@color/dark_Blue"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_w2"
-        app:layout_constraintStart_toStartOf="@id/guideline_w1"
-        app:layout_constraintTop_toBottomOf="@id/guideline_t3" />
-
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register"/>
     <TextView
         android:id="@+id/guest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="214dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:text="@string/i_am_guest"
+        android:textAlignment="center"
         android:textColor="@color/dark_Blue"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_w2"
-        app:layout_constraintStart_toStartOf="@id/guideline_w1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_t3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="46dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_t4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="729dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_w1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="485dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

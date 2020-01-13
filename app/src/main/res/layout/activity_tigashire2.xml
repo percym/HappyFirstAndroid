@@ -30,7 +30,6 @@
         android:text="Tigashire"
         android:textColor="@color/white"
         android:textSize="58sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_t2"
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toStartOf="@id/guideline_t1"
         app:layout_constraintTop_toBottomOf="@id/guideline_t3" />
@@ -44,7 +43,6 @@
         android:text="Rudo Moyo"
         android:textColor="@color/white"
         android:textSize="28sp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_t2"
         app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="@id/guideline_t1"
         app:layout_constraintTop_toBottomOf="@id/tigs" />
