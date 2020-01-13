@@ -1,8 +1,14 @@
 package zw.co.researchhub.happyfirst.model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.io.Serializable;
 
-@Entity(table="general_tips")
+import lombok.Data;
+
+@Entity(tableName="general_tips")
 @Data
 public class GeneralTip   implements Serializable {
 

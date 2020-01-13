@@ -11,6 +11,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
     buildTypes {
         release {
@@ -18,6 +23,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
@@ -39,4 +46,6 @@ dependencies {
 
     //lombok
     compileOnly "org.projectlombok:lombok:1.18.10"
+
+    annotationProcessor 'com.google.auto.value:auto-value:1.1'
 }
