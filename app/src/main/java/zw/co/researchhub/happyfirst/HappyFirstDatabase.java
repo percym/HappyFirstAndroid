@@ -56,23 +56,36 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
             generalTipDao.deleteAll();
 
             GeneralTip generalTip1 = new GeneralTip();
-            generalTip1.setTitle("Some Content");
-            generalTip1.setContent("Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title ");
+            generalTip1.setTitle("General title");
+            generalTip1.setContent("General Content General Content General Content General Content General Content General Content General Content General Content General Content General Content General Content ");
 
             GeneralTip generalTip2 = new GeneralTip();
-            generalTip2.setTitle("Some Title");
+            generalTip2.setTitle("General Content");
 
-            generalTip2.setContent("Some Content");
+            generalTip2.setContent("General title");
 
             GeneralTip generalTip3 = new GeneralTip();
-            generalTip3.setTitle("Some Title");
-            generalTip3.setContent("Some Content");
+            generalTip3.setTitle("General Content");
+            generalTip3.setContent("General title");
 
+            GeneralTip generalTip4 = new GeneralTip();
+            generalTip4.setTitle("General title");
+            generalTip4.setContent("General Content General Content General Content General Content General Content General Content General Content General Content General Content General Content General Content ");
 
+            GeneralTip generalTip5 = new GeneralTip();
+            generalTip5.setTitle("General Content");
+            generalTip5.setContent("General title");
+
+            GeneralTip generalTip6 = new GeneralTip();
+            generalTip6.setTitle("General Content");
+            generalTip6.setContent("General title");
 
             generalTipDao.insert(generalTip1);
             generalTipDao.insert(generalTip2);
             generalTipDao.insert(generalTip3);
+            generalTipDao.insert(generalTip4);
+            generalTipDao.insert(generalTip5);
+            generalTipDao.insert(generalTip6);
             return null;
         }
     }
