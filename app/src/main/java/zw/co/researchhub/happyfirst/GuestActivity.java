@@ -31,7 +31,7 @@ public class GuestActivity extends AppCompatActivity {
     private void showFragment(final Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
-        fragmentTransaction.commitNow();
+        fragmentTransaction.commitNowAllowingStateLoss();
         shownFragment = fragment;
 
     }
