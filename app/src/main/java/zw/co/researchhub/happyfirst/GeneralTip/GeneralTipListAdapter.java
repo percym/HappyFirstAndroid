@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -50,13 +54,13 @@ public class GeneralTipListAdapter extends RecyclerView.Adapter<GeneralTipListAd
             holder.titleText.setText(generalTip.getTitle());
             holder.contentText.setText(generalTip.getContent());
 
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//                    DialogFragment dialogFragment = MovieSaveDialogFragment.newInstance(movie.title, directorFullName);
-//                    dialogFragment.show(((AppCompatActivity) context).getSupportFragmentManager(), TAG_DIALOG_MOVIE_SAVE);
-                }
+            holder.itemView.setOnClickListener(v -> {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+                alertDialogBuilder.setMessage(holder.contentText.getText());
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
             });
+
         }
     }
 
