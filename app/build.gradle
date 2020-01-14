@@ -48,4 +48,7 @@ dependencies {
     compileOnly "org.projectlombok:lombok:1.18.10"
 
     annotationProcessor 'com.google.auto.value:auto-value:1.1'
+    debugImplementation 'com.idescout.sql:sqlscout-server:4.1'
+    releaseImplementation 'com.idescout.sql:sqlscout-server-noop:4.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }

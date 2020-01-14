@@ -8,14 +8,14 @@ import android.os.Bundle;
 import android.widget.Button;
 
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
         HappyFirstDatabase database = Room.databaseBuilder(this, HappyFirstDatabase.class, CONSTANTS.HAPPY_FIRST)
                 .allowMainThreadQueries()
                 .build();
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submit_btn);
         submitButton.setOnClickListener(v -> {
 
-            Intent i = new Intent(MainActivity.this, Welcome.class);
+            Intent i = new Intent(RegisterActivity.this, Welcome.class);
             startActivity(i);
         });
 

@@ -18,6 +18,9 @@
     <string name="enter_surname">ENTER SURNAME</string>
     <string name="enter_password">ENTER PASSWORD</string>
     <string name="rudo_moyo">Rudo Moyo</string>
+    <string name="guest">Guest</string>
+    <string name="general_tips">General Tips</string>
+    <string name="going_tips">Going Tips</string>
 
 
 </resources>

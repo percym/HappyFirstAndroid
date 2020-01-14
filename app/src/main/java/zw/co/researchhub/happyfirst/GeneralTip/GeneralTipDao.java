@@ -1,5 +1,6 @@
 package zw.co.researchhub.happyfirst.GeneralTip;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -14,7 +15,7 @@ import zw.co.researchhub.happyfirst.model.GeneralTip;
 @Dao
 public interface GeneralTipDao {
     @Query("SELECT * FROM "+ CONSTANTS.GENERAL_TIPS_TABLE)
-    List<GeneralTip> getAll();
+    LiveData<List<GeneralTip>> getAll();;
 
 
     /*
@@ -48,5 +49,9 @@ public interface GeneralTipDao {
 
     @Query("SELECT * FROM " + CONSTANTS.GENERAL_TIPS_TABLE +  " WHERE gen_tip_id = :id")
     public GeneralTip getGeneralTipById(Long id);
+
+
+    @Query("DELETE FROM " + CONSTANTS.GENERAL_TIPS_TABLE)
+    void deleteAll();
 
 }
