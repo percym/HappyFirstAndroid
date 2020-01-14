@@ -33,6 +33,7 @@ public class GuestActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commitNow();
         shownFragment = fragment;
+
     }
 
 }
