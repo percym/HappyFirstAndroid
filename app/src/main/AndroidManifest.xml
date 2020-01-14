@@ -22,6 +22,9 @@
         <activity android:name=".GuestActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".GeneralTip.ReadActivity"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

@@ -56,16 +56,18 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
             generalTipDao.deleteAll();
 
             GeneralTip generalTip1 = new GeneralTip();
-            generalTip1.setContent("Some Content");
-            generalTip1.setTitle("Some Title");
+            generalTip1.setTitle("Some Content");
+            generalTip1.setContent("Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title Some Title ");
 
             GeneralTip generalTip2 = new GeneralTip();
-            generalTip2.setContent("Some Content");
             generalTip2.setTitle("Some Title");
 
+            generalTip2.setContent("Some Content");
+
             GeneralTip generalTip3 = new GeneralTip();
-            generalTip3.setContent("Some Content");
             generalTip3.setTitle("Some Title");
+            generalTip3.setContent("Some Content");
+
 
 
             generalTipDao.insert(generalTip1);

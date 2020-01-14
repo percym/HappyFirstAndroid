@@ -2,6 +2,7 @@ package zw.co.researchhub.happyfirst.GeneralTip;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,10 +56,15 @@ public class GeneralTipListAdapter extends RecyclerView.Adapter<GeneralTipListAd
             holder.contentText.setText(generalTip.getContent());
 
             holder.itemView.setOnClickListener(v -> {
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-                alertDialogBuilder.setMessage(holder.contentText.getText());
-                AlertDialog alertDialog = alertDialogBuilder.create();
-                alertDialog.show();
+//                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context,R.style.DialogTheme);
+//                alertDialogBuilder.setMessage(holder.contentText.getText());
+//                AlertDialog alertDialog = alertDialogBuilder.create();
+//                alertDialog.setTitle(holder.titleText.getText());
+//                alertDialog.show();
+                Intent intent = new Intent(v.getContext(), ReadActivity.class);
+                intent.putExtra("title",holder.titleText.getText() );
+                intent.putExtra("content",holder.contentText.getText() );
+                v.getContext().startActivity(intent);
             });
 
         }
