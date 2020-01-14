@@ -21,6 +21,11 @@ public class GeneralTipViewModel extends AndroidViewModel {
         generalTipLiveData = generalTipDao.getAll();
     }
 
+    public LiveData<List<GeneralTip>> getGeneralTipLiveData() {
+        return generalTipDao.getAll();
+    }
 
-
+    public void deleteAll() {
+        generalTipDao.deleteAll();
+    }
 }
