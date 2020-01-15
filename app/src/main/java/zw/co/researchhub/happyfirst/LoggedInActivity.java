@@ -2,6 +2,7 @@ package zw.co.researchhub.happyfirst;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import zw.co.researchhub.happyfirst.User.LoggedInGeneralTipListFragment;
+import zw.co.researchhub.happyfirst.User.ManageStudentActivity;
 import zw.co.researchhub.happyfirst.model.User;
 
 
@@ -36,7 +38,12 @@ public class LoggedInActivity extends AppCompatActivity {
 
         manageStudentButton = findViewById(R.id.view_manage);
         if (loggedInUser.getRole().equals("TEACHER")){
+            manageStudentButton.setVisibility(View.VISIBLE);
             manageStudentButton.setOnClickListener(v ->{
+
+                Intent i = new Intent(LoggedInActivity.this, ManageStudentActivity.class);
+                startActivity(i);
+                finish();
 
             });
         }

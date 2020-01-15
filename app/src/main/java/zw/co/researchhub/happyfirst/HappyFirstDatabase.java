@@ -18,7 +18,7 @@ import zw.co.researchhub.happyfirst.model.GeneralTip;
 import zw.co.researchhub.happyfirst.model.SpecificTip;
 import zw.co.researchhub.happyfirst.model.User;
 
-@Database(entities = {GeneralTip.class, SpecificTip.class, User.class}, version = 1)
+@Database(entities = {GeneralTip.class, SpecificTip.class, User.class}, version = 1 , exportSchema = false)
 public abstract class HappyFirstDatabase extends RoomDatabase {
     private static HappyFirstDatabase INSTANCE;
     public abstract GeneralTipDao generalTipDao();

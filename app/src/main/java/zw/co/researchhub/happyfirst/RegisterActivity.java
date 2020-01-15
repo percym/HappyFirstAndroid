@@ -73,6 +73,8 @@ public class RegisterActivity extends AppCompatActivity {
              user.setPassword(pass.getText().toString());
              user.setRole(dropdownRole.getSelectedItem().toString());
              user.setGender(dropdownGender.getSelectedItem().toString());
+             user.setIsGoing(false);
+
              try {
                  userDao.insert(user);
                  Toast.makeText(this, "Registration Successful", Toast.LENGTH_LONG).show();

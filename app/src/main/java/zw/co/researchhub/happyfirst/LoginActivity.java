@@ -53,14 +53,11 @@ public class LoginActivity extends AppCompatActivity {
                  User loggedInUser = userDao.getUserByNameAndPassword(username,password);
                  Log.d("user" , loggedInUser.getName());
                  if (loggedInUser != null) {
-
-                     if (loggedInUser.getRole().equals("STUDENT")) {
                          Toast.makeText(this, "Login success", Toast.LENGTH_LONG).show();
                          Intent i = new Intent(LoginActivity.this, LoggedInActivity.class);
                          i.putExtra("loggedInUser", loggedInUser);
                          startActivity(i);
                          finish();
-                     }
                  }
          }
         });

@@ -37,12 +37,6 @@ public class Student extends User implements Serializable {
         this.parent_id = parent_id;
     }
 
-    public int getIsGoing() {
-        return isGoing;
-    }
 
-    public void setIsGoing(int isGoing) {
-        this.isGoing = isGoing;
-    }
 }
 

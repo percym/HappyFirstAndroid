@@ -29,6 +29,8 @@ public class User implements Serializable {
     @ColumnInfo(name ="gender")
     private String gender;
 
+    @ColumnInfo(name="is_going")
+    private boolean isGoing;
 
 
 //    @Embedded(prefix = "mylist_array") private ArrayList<MyListItems> myListItems;
@@ -80,6 +82,14 @@ public class User implements Serializable {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public boolean getIsGoing() {
+        return isGoing;
+    }
+
+    public void setIsGoing(boolean isGoing) {
+        this.isGoing = isGoing;
     }
 }
 

@@ -58,7 +58,7 @@ public interface UserDao {
     void deleteAll();
 
     @Query("SELECT * FROM " + CONSTANTS.USER_TIPS_TABLE +  " WHERE role = :role ")
-    public User getUserByRole(String role );
+    public LiveData<List<User>> getUserByRole(String role );
 
 
 
