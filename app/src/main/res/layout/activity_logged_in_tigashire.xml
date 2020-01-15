@@ -13,14 +13,11 @@
     android:layout_height="match_parent"
     tools:context=".GuestActivity">
 
-
-
-
     <TextView
         android:id="@+id/tigs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:fontFamily=""
         android:text="Welcome"
         android:textAlignment="center"
@@ -98,13 +95,27 @@
         app:layout_constraintTop_toBottomOf="@id/view_manage" />
 
 
+    <Button
+        android:id="@+id/ask_for_help"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_login"
+        android:text="Ask for Help"
+        android:textColor="@color/dark_Blue"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_manage_children" />
+
+
     <ImageView
         android:id="@+id/icon"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/todo"
         android:paddingTop="80dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="140dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_all_we_have_is_a_happy_period"
         app:layout_constraintStart_toStartOf="parent"
