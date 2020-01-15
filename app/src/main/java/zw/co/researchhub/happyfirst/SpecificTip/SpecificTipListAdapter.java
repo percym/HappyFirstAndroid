@@ -1,61 +1,60 @@
-package zw.co.researchhub.happyfirst.GeneralTip;
+package zw.co.researchhub.happyfirst.SpecificTip;
 
 import android.content.Context;
-
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import zw.co.researchhub.happyfirst.GeneralTip.ReadActivity;
 import zw.co.researchhub.happyfirst.R;
 import zw.co.researchhub.happyfirst.model.GeneralTip;
+import zw.co.researchhub.happyfirst.model.SpecificTip;
 
 
 /**
  * @author
  */
 
-public class GeneralTipListAdapter extends RecyclerView.Adapter<GeneralTipListAdapter.GeneralTipViewHolder> {
+public class SpecificTipListAdapter extends RecyclerView.Adapter<SpecificTipListAdapter.GeneralTipViewHolder> {
     private LayoutInflater layoutInflater;
-    private List<GeneralTip> generalTipList;
+    private List<SpecificTip> specificTips;
     private Context context;
 
-    public GeneralTipListAdapter(Context context) {
+    public SpecificTipListAdapter(Context context) {
         this.layoutInflater = LayoutInflater.from(context);
         this.context = context;
     }
 
-    public void setGeneralTipList(List<GeneralTip> generalTipList) {
-        this.generalTipList = generalTipList;
+    public void setGeneralTipList(List<SpecificTip> specificTips) {
+        this.specificTips = specificTips;
         notifyDataSetChanged();
     }
 
     @Override
     public GeneralTipViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        final View itemView = layoutInflater.inflate(R.layout.item_list_movie, parent, false);
+        final View itemView = layoutInflater.inflate(R.layout.item_list_specific, parent, false);
         return new GeneralTipViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(GeneralTipViewHolder holder, int position) {
-        if (generalTipList == null) {
+        if (specificTips == null) {
             return;
         }
 
-        final GeneralTip generalTip = generalTipList.get(position);
-        if (generalTip != null) {
-            holder.titleText.setText(generalTip.getTitle());
-            holder.contentText.setText(generalTip.getContent());
+        final SpecificTip specificTip = specificTips.get(position);
+        if (specificTip != null) {
+            holder.titleText.setText(specificTip.getTitle());
+            holder.contentText.setText(specificTip.getContent());
 
             holder.itemView.setOnClickListener(v -> {
+
                 Intent intent = new Intent(v.getContext(), ReadActivity.class);
                 intent.putExtra("title",holder.titleText.getText() );
                 intent.putExtra("content",holder.contentText.getText() );
@@ -67,10 +66,10 @@ public class GeneralTipListAdapter extends RecyclerView.Adapter<GeneralTipListAd
 
     @Override
     public int getItemCount() {
-        if (generalTipList == null) {
+        if (specificTips == null) {
             return 0;
         } else {
-            return generalTipList.size();
+            return specificTips.size();
         }
     }
 

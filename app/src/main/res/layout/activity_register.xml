@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_login"
+    android:background="@color/dark_Blue"
     tools:context=".RegisterActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -90,34 +90,36 @@
         android:inputType="text"
         android:hint="@string/enter_password"
         android:autofillHints="" />
-    <EditText
-        android:id="@+id/confirm_pass"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/my_border"
+
+
+    <Spinner
+        android:id="@+id/role"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/bg_login"
         android:padding="16dp"
-        android:textColorHint="@color/dark_Blue"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/pass"
-        android:inputType="text"
-        android:hint="@string/confirm_password"
-        android:autofillHints="" />
-    <EditText
-        android:id="@+id/category"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/my_border"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/pass" />
+
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/bg_login"
         android:padding="16dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/confirm_pass"
-        android:inputType="text"
-        android:hint="@string/category"
-        android:textColorHint="@color/dark_Blue"
-        android:autofillHints="" tools:targetApi="o"/>
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/role" />
+
 
     <Button
         android:id="@+id/submit_btn"
@@ -132,7 +134,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/category" />
+        app:layout_constraintTop_toBottomOf="@id/gender" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

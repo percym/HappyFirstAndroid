@@ -12,12 +12,16 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import zw.co.researchhub.happyfirst.GeneralTip.GeneralTipDao;
+import zw.co.researchhub.happyfirst.SpecificTip.SpecificTipDao;
 import zw.co.researchhub.happyfirst.model.GeneralTip;
+import zw.co.researchhub.happyfirst.model.SpecificTip;
+import zw.co.researchhub.happyfirst.model.User;
 
-@Database(entities = {GeneralTip.class}, version = 1)
+@Database(entities = {GeneralTip.class, SpecificTip.class, User.class}, version = 1)
 public abstract class HappyFirstDatabase extends RoomDatabase {
     private static HappyFirstDatabase INSTANCE;
     public abstract GeneralTipDao generalTipDao();
+    public abstract SpecificTipDao specificTipDao();
 
     public static HappyFirstDatabase getDatabase(final Context context){
     if (INSTANCE ==null){
@@ -45,9 +49,12 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
 
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private final GeneralTipDao generalTipDao;
+        private final SpecificTipDao specificTipDao;
 
         public PopulateDbAsync(HappyFirstDatabase instance) {
             generalTipDao = instance.generalTipDao();
+            specificTipDao = instance.specificTipDao();
+
 
         }
 
@@ -86,6 +93,44 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
             generalTipDao.insert(generalTip4);
             generalTipDao.insert(generalTip5);
             generalTipDao.insert(generalTip6);
+
+
+
+            SpecificTip specificTip = new SpecificTip();
+            specificTip.setTitle("Some Title");
+            specificTip.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+
+
+            SpecificTip specificTip1 = new SpecificTip();
+            specificTip1.setTitle("Some Title");
+            specificTip1.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+
+            SpecificTip specificTip2 = new SpecificTip();
+            specificTip2.setTitle("Some Title");
+            specificTip2.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+
+
+            SpecificTip specificTip3= new SpecificTip();
+            specificTip3.setTitle("Some Title");
+            specificTip3.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+
+
+            SpecificTip specificTip4 = new SpecificTip();
+            specificTip4.setTitle("Some Title");
+            specificTip4.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+
+
+            SpecificTip specificTip5= new SpecificTip();
+            specificTip5.setTitle("Some Title");
+            specificTip5.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+
+            specificTipDao.insert(specificTip);
+            specificTipDao.insert(specificTip1);
+            specificTipDao.insert(specificTip2);
+            specificTipDao.insert(specificTip3);
+            specificTipDao.insert(specificTip4);
+            specificTipDao.insert(specificTip5);
+
             return null;
         }
     }
