@@ -2,11 +2,13 @@ package zw.co.researchhub.happyfirst.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName="user")
+@Entity(tableName="user" ,indices = {@Index(value = {"name"},
+        unique = true)})
 public class User implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
@@ -15,20 +17,19 @@ public class User implements Serializable {
     @ColumnInfo(name="name")
     private String name;
 
+    @ColumnInfo(name="surname")
+    private String surname ;
+
     @ColumnInfo(name="password")
-    private String content;
+    private String password ;
 
     @ColumnInfo(name ="role")
     private String role;
 
-    @ColumnInfo(name="teacher_id")
-    private int teacher_id;
+    @ColumnInfo(name ="gender")
+    private String gender;
 
-    @ColumnInfo(name="parent_id")
-    private int parent_id;
 
-    @ColumnInfo(name="is_going")
-    private int isGoing;
 
 //    @Embedded(prefix = "mylist_array") private ArrayList<MyListItems> myListItems;
 
@@ -49,12 +50,20 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public String getContent() {
-        return content;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRole() {
@@ -65,28 +74,12 @@ public class User implements Serializable {
         this.role = role;
     }
 
-    public int getTeacher_id() {
-        return teacher_id;
+    public String getGender() {
+        return gender;
     }
 
-    public void setTeacher_id(int teacher_id) {
-        this.teacher_id = teacher_id;
-    }
-
-    public int getParent_id() {
-        return parent_id;
-    }
-
-    public void setParent_id(int parent_id) {
-        this.parent_id = parent_id;
-    }
-
-    public int getIsGoing() {
-        return isGoing;
-    }
-
-    public void setIsGoing(int isGoing) {
-        this.isGoing = isGoing;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
 

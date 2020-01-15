@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignIn">
+    android:background="@color/dark_Blue"
+    tools:context=".RegisterActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -23,17 +24,15 @@
     <ImageView
         android:id="@+id/icon"
         android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/ic_logofinal___copy"
         app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
-        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintDimensionRatio="w,16:9"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintTop_toTopOf="@+id/guideline_top" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
@@ -50,50 +49,53 @@
         app:layout_constraintGuide_begin="98dp" />
 
     <EditText
-        android:id="@+id/user"
+        android:id="@+id/user_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:background="@drawable/my_border"
-        android:hint="@string/enter_name"
-        android:importantForAutofill="no"
-        android:inputType="text"
         android:padding="16dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        android:inputType="text"
+        android:hint="@string/enter_name"
+        android:textColorHint="@color/dark_Blue"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@drawable/my_border"
+        android:hint="@string/enter_password"
+        android:inputType="textVisiblePassword"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
         android:textColorHint="@color/dark_Blue"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/icon" />
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:layout_editor_absoluteY="228dp" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:autofillHints=""
-        android:background="@drawable/my_border"
-        android:hint="@string/enter_surname"
-        android:inputType="text"
-        android:padding="16dp"
-        android:textColorHint="@color/dark_Blue"
-        app:layout_constraintEnd_toStartOf="@id/guideline_right"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/user" />
 
     <Button
-        android:id="@+id/signin"
+        android:id="@+id/submit_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/btnsignin"
+        android:background="@drawable/button_bg"
         android:padding="18dp"
-        android:text="@string/signin"
+        android:layout_marginTop="16dp"
+        android:text="@string/submit"
         android:textAllCaps="false"
-        android:textColor="@color/orange"
+        android:textColor="@color/dark_Blue"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/password" />
-
+        app:layout_constraintTop_toBottomOf="@id/pass"
+        tools:layout_editor_absoluteY="302dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,25 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".User.ManageStudentActivity"></activity>
         <activity android:name=".Welcome">
             <intent-filter>
                 <action
-                    android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
                     android:name="android.intent.action.MAIN"
-                    android:screenOrientation="portrait"/>
+                    android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+                    android:screenOrientation="portrait" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".GuestActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".GeneralTip.ReadActivity"
-            android:screenOrientation="portrait">
-        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".GuestActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".GeneralTip.ReadActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".LoggedInActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

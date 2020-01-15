@@ -13,6 +13,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import zw.co.researchhub.happyfirst.GeneralTip.GeneralTipDao;
 import zw.co.researchhub.happyfirst.SpecificTip.SpecificTipDao;
+import zw.co.researchhub.happyfirst.User.UserDao;
 import zw.co.researchhub.happyfirst.model.GeneralTip;
 import zw.co.researchhub.happyfirst.model.SpecificTip;
 import zw.co.researchhub.happyfirst.model.User;
@@ -22,6 +23,7 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
     private static HappyFirstDatabase INSTANCE;
     public abstract GeneralTipDao generalTipDao();
     public abstract SpecificTipDao specificTipDao();
+    public abstract UserDao userDao();
 
     public static HappyFirstDatabase getDatabase(final Context context){
     if (INSTANCE ==null){
@@ -50,10 +52,12 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private final GeneralTipDao generalTipDao;
         private final SpecificTipDao specificTipDao;
+        private final UserDao userDao;
 
         public PopulateDbAsync(HappyFirstDatabase instance) {
             generalTipDao = instance.generalTipDao();
             specificTipDao = instance.specificTipDao();
+            userDao = instance.userDao();
 
 
         }

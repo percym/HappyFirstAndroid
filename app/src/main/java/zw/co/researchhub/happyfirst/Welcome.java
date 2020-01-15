@@ -10,6 +10,7 @@ import androidx.room.Room;
 
 public class Welcome extends AppCompatActivity {
     private Button registerButton;
+    private Button signInButton;
     private TextView txtGuest;
 
 
@@ -29,6 +30,14 @@ public class Welcome extends AppCompatActivity {
 
             Intent i = new Intent(Welcome.this, GuestActivity.class);
             startActivity(i);
+        });
+
+        signInButton = findViewById(R.id.sign);
+        signInButton.setOnClickListener(v -> {
+
+            Intent i = new Intent(Welcome.this, LoginActivity.class);
+            startActivity(i);
+            finish();
         });
 
         reCreateDatabase();

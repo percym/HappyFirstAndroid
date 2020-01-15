@@ -22,6 +22,9 @@ allprojects {
             url 'http://www.idescout.com/maven/repo/'
             name 'IDEScout, Inc.'
         }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
 
     }
 }
