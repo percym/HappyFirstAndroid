@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_Blue"
+    tools:context=".AssessmentActivity">
+
+    <TextView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Do you ?"
+        android:textColor="@color/orange"
+        android:textSize="34dp"
+        android:textAlignment="center"/>
+    <CheckBox
+        android:id="@+id/chk1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Cramps (pain in your lower belly or lower back)"
+        android:textColor="@color/orange"/>
+
+
+
+    <CheckBox
+        android:id="@+id/chk2"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q2"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Bloating (when your belly feels puffy)"
+        android:textColor="@color/orange" />
+
+    <CheckBox
+        android:id="@+id/chk3"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk2"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q3"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Breakouts (getting pimples)"
+        android:textColor="@color/orange" />
+
+    <CheckBox
+        android:id="@+id/chk4"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk3"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q4"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Sore Breasts"
+        android:textColor="@color/orange" />
+
+    <CheckBox
+        android:id="@+id/chk5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk4"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Feeling tired"
+        android:textColor="@color/orange" />
+
+    <CheckBox
+        android:id="@+id/chk6"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk5"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q6"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Mood swings (when your emotions "
+        android:textColor="@color/orange" />
+
+ <CheckBox
+        android:id="@+id/chk7"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk6"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q7"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q6"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Mood swings (when your emotions "
+        android:textColor="@color/orange" />
+
+
+    <CheckBox
+        android:id="@+id/chk8"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk7"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q8"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q7"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Developing breasts "
+        android:textColor="@color/orange" />
+
+    <CheckBox
+        android:id="@+id/chk9"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/chk8"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/q9"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/q8"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Developing breasts "
+        android:textColor="@color/orange" />
+
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/q9"
+        android:background="@color/orange"
+        android:text="Submit"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+       />
+
+
+
+
+
+</RelativeLayout>

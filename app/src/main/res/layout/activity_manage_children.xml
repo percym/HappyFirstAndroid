@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily=""
-            android:text="Manage Students"
+            android:text="Manage Children"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30dp"

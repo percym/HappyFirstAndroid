@@ -5,6 +5,12 @@
     android:background="@color/dark_Blue">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/orange"
+        android:layout_marginRight="-51dp"
+        android:layout_marginLeft="-51dp"/>
+    <TextView
         android:id="@+id/fname"
         android:layout_width="200dp"
         android:layout_height="26dip"
@@ -86,10 +92,5 @@
         android:layout_below="@id/isGoing"
         android:textColor="@color/dark_Blue"
         android:layout_marginTop="6dp" />
-
-
-
-
-
 
 </RelativeLayout>

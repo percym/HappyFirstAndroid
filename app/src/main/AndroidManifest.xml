@@ -35,6 +35,13 @@
         <activity
             android:name=".LoggedInActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AssessmentActivity"
+            android:screenOrientation="portrait"></activity>
+ <activity
+            android:name=".User.ManageChildrenActivity"
+            android:screenOrientation="portrait"></activity>
+
 
     </application>
 

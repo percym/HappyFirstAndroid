@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import zw.co.researchhub.happyfirst.User.LoggedInGeneralTipListFragment;
+import zw.co.researchhub.happyfirst.User.ManageChildrenActivity;
 import zw.co.researchhub.happyfirst.User.ManageStudentActivity;
 import zw.co.researchhub.happyfirst.model.User;
 
@@ -19,6 +20,7 @@ public class LoggedInActivity extends AppCompatActivity {
     private Button generalTipsButton;
     private Button specificTipsButton;
     private Button manageStudentButton;
+    private Button manageChildrenButton;
     private TextView name;
 
 
@@ -47,6 +49,14 @@ public class LoggedInActivity extends AppCompatActivity {
 
             });
         }
+
+        manageChildrenButton = findViewById(R.id.view_manage_children);
+        manageChildrenButton.setVisibility(View.VISIBLE);
+        manageChildrenButton.setOnClickListener(v -> {
+            Intent i = new Intent(LoggedInActivity.this, ManageChildrenActivity.class);
+            startActivity(i);
+            finish();
+        });
     }
 
     private void showFragment(final Fragment fragment, User user) {

@@ -83,6 +83,21 @@
         app:layout_constraintTop_toBottomOf="@id/view_going" />
 
 
+    <Button
+        android:id="@+id/view_manage_children"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/orange"
+        android:text="Manage Children"
+        android:textColor="@color/dark_Blue"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_manage" />
+
+
     <ImageView
         android:id="@+id/icon"
         android:layout_width="match_parent"

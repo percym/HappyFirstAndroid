@@ -16,7 +16,7 @@ import java.util.List;
 import zw.co.researchhub.happyfirst.R;
 import zw.co.researchhub.happyfirst.model.User;
 
-public class ManageStudentActivity extends AppCompatActivity {
+public class ManageChildrenActivity extends AppCompatActivity {
 
    private UserAdapter userAdapter;
    private Context context;

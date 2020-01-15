@@ -1,6 +1,7 @@
 package zw.co.researchhub.happyfirst.User;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import zw.co.researchhub.happyfirst.AssessmentActivity;
+import zw.co.researchhub.happyfirst.GeneralTip.ReadActivity;
 import zw.co.researchhub.happyfirst.HappyFirstDatabase;
 import zw.co.researchhub.happyfirst.R;
 import zw.co.researchhub.happyfirst.model.User;
+
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 
 /**
@@ -57,10 +62,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             holder.isGoing.setText(user.getIsGoing() == true ?"HAS STARTED":"HAS NOT STARTED");
 
             holder.takeQuiz.setOnClickListener(v -> {
-//                Intent intent = new Intent(v.getContext(), ReadActivity.class);
-//                intent.putExtra("title",holder.titleText.getText() );
-//                intent.putExtra("content",holder.contentText.getText() );
-//                v.getContext().startActivity(intent);
+                Intent intent = new Intent(v.getContext(), AssessmentActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
+                v.getContext().startActivity(intent);
             });
 
             holder.setIsGoing.setOnClickListener(v -> {
