@@ -51,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
              String username = user_name.getText().toString();
              String password = pass.getText().toString();
                  User loggedInUser = userDao.getUserByNameAndPassword(username,password);
-                 Log.d("user" , loggedInUser.getName());
                  if (loggedInUser != null) {
                          Toast.makeText(this, "Login success", Toast.LENGTH_LONG).show();
                          Intent i = new Intent(LoginActivity.this, LoggedInActivity.class);
