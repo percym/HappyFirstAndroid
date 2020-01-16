@@ -67,8 +67,8 @@ public class LoggedInActivity extends AppCompatActivity {
         }
         askforhelp = findViewById(R.id.ask_for_help);
         askforhelp.setOnClickListener(v -> {
-            String number = "12346556";  // The number on which you want to send SMS
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+            String number = "0777285200;0772204155";  // The number on which you want to send SMS
+            startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse(number)));
         });
     }
 

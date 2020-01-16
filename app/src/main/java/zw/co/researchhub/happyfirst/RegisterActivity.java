@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAwesomeValidation.addValidation(this, R.id.user_name, "[a-zA-Z\\s]+", R.string.errname);
         mAwesomeValidation.addValidation(this, R.id.surname, "[a-zA-Z\\s]+", R.string.errsurname);
-        mAwesomeValidation.addValidation(this, R.id.pass, "[a-zA-Z\\s]+", R.string.enter_password);
+        mAwesomeValidation.addValidation(this, R.id.pass, "[a-zA-Z\\s]+", R.string.password);
 
         submitButton = findViewById(R.id.submit_btn);
         submitButton.setOnClickListener(v -> {

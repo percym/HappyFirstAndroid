@@ -15,15 +15,13 @@
     <string name="i_have_an_acount">I HAVE AN ACOUNT</string>
     <string name="welcome_to_happy_first">Welcome To Happy First!</string>
     <string name="i_am_guest">I AM GUEST</string>
-    <string name="enter_surname">Enter Surname</string>
-    <string name="enter_password">Enter Password</string>
-    <string name="rudo_moyo">Rudo Moyo</string>
+    <string name="enter_surname">ENTER SURNAME</string>
+    <string name="general_tips">GENERAL TIPS</string>
+    <string name="going_tips">SPECIFIC TIPS</string>
+    <string name="errname">ENTER NAME</string>
+    <string name="errsurname">ENTER NAME</string>
+    <string name="manage">VIEW STUDENTS</string>
     <string name="guest">Guest</string>
-    <string name="general_tips">General Tips</string>
-    <string name="going_tips">Specific Tips</string>
-    <string name="errname">Enter Name</string>
-    <string name="errsurname">Enter Surname</string>
-    <string name="manage">View Students</string>
 
 
 </resources>

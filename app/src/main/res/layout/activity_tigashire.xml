@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:fontFamily=""
-        android:text="@string/rudo_moyo"
+        android:text="@string/password"
         android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintHorizontal_bias="0.93"
