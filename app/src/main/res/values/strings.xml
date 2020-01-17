@@ -22,6 +22,7 @@
     <string name="errsurname">ENTER NAME</string>
     <string name="manage">VIEW STUDENTS</string>
     <string name="guest">Guest</string>
+    <string name="bday">When is your birthday ?</string>
 
 
 </resources>
