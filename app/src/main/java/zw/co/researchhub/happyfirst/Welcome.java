@@ -37,7 +37,6 @@ public class Welcome extends AppCompatActivity {
 
             Intent i = new Intent(Welcome.this, LoginActivity.class);
             startActivity(i);
-            finish();
         });
 
         reCreateDatabase();

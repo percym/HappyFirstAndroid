@@ -9,17 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".User.ManageStudentActivity"></activity>
-        <activity android:name=".Welcome">
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
-                    android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
                     android:screenOrientation="portrait" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".User.ManageStudentActivity"></activity>
+        <activity
+            android:name=".Welcome"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".RegisterActivity"
             android:screenOrientation="portrait"></activity>
