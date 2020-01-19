@@ -2,6 +2,7 @@ package zw.co.researchhub.happyfirst.GeneralTip;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -30,6 +31,7 @@ public class ReadActivity extends AppCompatActivity {
         String contentString = intent.getStringExtra("content");
         title.setText(titleString);
         content.setText(contentString);
+        content.setMovementMethod(new ScrollingMovementMethod());
 
 
     }

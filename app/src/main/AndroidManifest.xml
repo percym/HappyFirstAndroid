@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity
             android:name=".SplashScreenActivity"
             android:screenOrientation="portrait"
@@ -19,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CycleStartedActivity"></activity>
+        <activity android:name=".CycleStartedActivity" />
         <activity android:name=".User.ManageStudentActivity" />
         <activity
             android:name=".Welcome"
@@ -48,6 +50,10 @@
         <activity
             android:name=".BDayActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".TrackActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package zw.co.researchhub.happyfirst.SpecificTip;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,10 +17,13 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.List;
 
 import zw.co.researchhub.happyfirst.GeneralTip.GeneralTipListAdapter;
 import zw.co.researchhub.happyfirst.GeneralTip.GeneralTipViewModel;
+import zw.co.researchhub.happyfirst.GuestActivity;
 import zw.co.researchhub.happyfirst.R;
 import zw.co.researchhub.happyfirst.model.GeneralTip;
 import zw.co.researchhub.happyfirst.model.SpecificTip;
@@ -32,6 +36,7 @@ public class SpecificTipListFragment extends Fragment {
     private SpecificTipListAdapter specificTipListAdapter;
     private SpecificTipViewModel specificTipViewModel;
     private Context context;
+    private FloatingActionButton back;
 
 
 
@@ -61,6 +66,11 @@ public class SpecificTipListFragment extends Fragment {
         recyclerView.setAdapter(specificTipListAdapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        back = view.findViewById(R.id.back);
+        back.setOnClickListener(v -> {
+            Intent i = new Intent(getActivity(), GuestActivity.class);
+            startActivity(i);
+        });
         return view;
     }
 

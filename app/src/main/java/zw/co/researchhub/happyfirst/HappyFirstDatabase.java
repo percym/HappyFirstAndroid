@@ -125,6 +125,7 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
             generalTipDao.insert(generalTip6);
 
 
+            specificTipDao.deleteAll();
 
             SpecificTip specificTip = new SpecificTip();
             specificTip.setTitle("I got my period and I haven't told my mom yet. It's really hard for me to talk about things\n" +
@@ -143,8 +144,13 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
                     "Liners are great choices for daily liners that help you feel dry, fresh and confident every day.");
 
             SpecificTip specificTip2 = new SpecificTip();
-            specificTip2.setTitle("Some Title");
-            specificTip2.setContent("Some Content Some ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome ContentSome Content");
+            specificTip2.setTitle("How do I get ready for my first period?");
+            specificTip2.setContent("Talk to your mum or another adult you trust about what you can expect before it actually\n" +
+                    "happens.\n" +
+                    "It's a good idea to start carrying sanitary pads or tampons around with you in advance, so you\n" +
+                    "aren't scrambling to find some when your period finally arrives.\n" +
+                    "If you find yourself at school without a pad or tampon, talk to a female teacher or the school\n" +
+                    "nurse. They're used to being asked and they'll want to help you out");
 
 
             SpecificTip specificTip3= new SpecificTip();

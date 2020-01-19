@@ -29,6 +29,11 @@ public class BDayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pick_bday);
         userDao = HappyFirstDatabase.getDatabase(getApplicationContext()).userDao();
         bdayPicker = findViewById(R.id.bdayPicker);
+//        Calendar c = Calendar.getInstance();
+////        c.add(Calendar.YEAR, -60);
+//        bdayPicker.setMinDate(c.getTimeInMillis());
+////        c.add(Calendar.YEAR, 10);
+//        bdayPicker.setMaxDate(c.getTimeInMillis());
         submit = findViewById(R.id.submit_btn);
         bday = getDateFromDatePicker(bdayPicker);
 

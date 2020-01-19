@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/dark_Blue"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/orange"
+        android:text="Track Period"
+        android:textColor="@color/dark_Blue"
+        android:layout_marginBottom="150dp"
+        android:layout_above="@id/icon"/>
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:contentDescription="@string/todo"
+        android:paddingTop="140dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_all_we_have_is_a_happy_period"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -16,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import zw.co.researchhub.happyfirst.SpecificTip.SpecificTipListFragment;
 import zw.co.researchhub.happyfirst.User.LoggedInGeneralTipListFragment;
+import zw.co.researchhub.happyfirst.User.LoggedInSpecificTipListFragment;
 import zw.co.researchhub.happyfirst.User.ManageChildrenActivity;
 import zw.co.researchhub.happyfirst.User.ManageStudentActivity;
 import zw.co.researchhub.happyfirst.model.User;
@@ -42,7 +43,7 @@ public class LoggedInActivity extends AppCompatActivity {
         generalTipsButton.setOnClickListener(v-> showFragment(LoggedInGeneralTipListFragment.newInstance(),loggedInUser));
 
         specificTipsButton = findViewById(R.id.view_going);
-        specificTipsButton.setOnClickListener(v-> showFragment(SpecificTipListFragment.newInstance()));
+        specificTipsButton.setOnClickListener(v-> showFragment(LoggedInSpecificTipListFragment.newInstance(), loggedInUser));
 
         manageStudentButton = findViewById(R.id.view_manage);
         if (loggedInUser.getRole().equals("TEACHER")){
@@ -67,8 +68,8 @@ public class LoggedInActivity extends AppCompatActivity {
         }
         askforhelp = findViewById(R.id.ask_for_help);
         askforhelp.setOnClickListener(v -> {
-            String number = "0777285200;0772204155";  // The number on which you want to send SMS
-            startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse(number)));
+            String number = "0772204155";  // The number on which you want to send SMS
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
         });
     }
 

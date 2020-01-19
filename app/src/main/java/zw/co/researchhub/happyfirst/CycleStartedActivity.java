@@ -33,7 +33,7 @@ public class CycleStartedActivity extends AppCompatActivity {
             loggedInUser.setIsGoing(true);
             loggedInUser.setFirstLogin(false);
             userDao.update(loggedInUser);
-            Intent i = new Intent(CycleStartedActivity.this, LoggedInActivity.class);
+            Intent i = new Intent(CycleStartedActivity.this, TrackActivity.class);
             i.putExtra("loggedInUser", loggedInUser);
             startActivity(i);
         }else{

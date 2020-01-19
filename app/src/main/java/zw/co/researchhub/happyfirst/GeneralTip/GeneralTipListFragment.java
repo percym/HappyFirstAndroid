@@ -2,6 +2,7 @@ package zw.co.researchhub.happyfirst.GeneralTip;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
@@ -17,9 +18,13 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.List;
 
+import zw.co.researchhub.happyfirst.GuestActivity;
 import zw.co.researchhub.happyfirst.R;
+import zw.co.researchhub.happyfirst.Welcome;
 import zw.co.researchhub.happyfirst.model.GeneralTip;
 
 /**
@@ -30,6 +35,7 @@ public class GeneralTipListFragment extends Fragment {
     private GeneralTipListAdapter generalTipListAdapter;
     private GeneralTipViewModel generalTipViewModel;
     private Context context;
+    private FloatingActionButton back;
 
 
 
@@ -47,7 +53,6 @@ public class GeneralTipListFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         initData();
     }
 
@@ -59,6 +64,11 @@ public class GeneralTipListFragment extends Fragment {
         recyclerView.setAdapter(generalTipListAdapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        back = view.findViewById(R.id.back);
+        back.setOnClickListener(v -> {
+            Intent i = new Intent(getActivity(), GuestActivity.class);
+            startActivity(i);
+        });
         return view;
     }
 

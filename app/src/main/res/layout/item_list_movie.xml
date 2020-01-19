@@ -8,11 +8,14 @@
         android:id="@+id/generalTitle"
         style="@style/movie_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/generalContent"
         style="@style/movie_director"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="gone"/>
 </LinearLayout>
