@@ -32,8 +32,7 @@ public class BDayActivity extends AppCompatActivity {
         submit = findViewById(R.id.submit_btn);
         bday = getDateFromDatePicker(bdayPicker);
 
-        loggedInUser = userDao.getUserById(1L);
-//      loggedInUser =   (User) getIntent().getSerializableExtra("loggedInUser");
+      loggedInUser =   (User) getIntent().getSerializableExtra("loggedInUser");
         submit.setOnClickListener(v -> {
             loggedInUser.setBirthDay(bday);
             userDao.update(loggedInUser);
