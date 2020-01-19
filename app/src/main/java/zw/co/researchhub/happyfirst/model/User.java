@@ -6,6 +6,7 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity(tableName="user" ,indices = {@Index(value = {"name"},
         unique = true)})
@@ -32,9 +33,14 @@ public class User implements Serializable {
     @ColumnInfo(name="is_going")
     private boolean isGoing;
 
+    @ColumnInfo(name ="first_login")
+    private  boolean firstLogin;
 
-//    @Embedded(prefix = "mylist_array") private ArrayList<MyListItems> myListItems;
+    @ColumnInfo(name = "birth_day")
+    private Date birthDay;
 
+    @ColumnInfo(name ="orphan")
+    private  boolean orphan;
 
     public int getUser_id() {
         return user_id;
@@ -90,6 +96,30 @@ public class User implements Serializable {
 
     public void setIsGoing(boolean isGoing) {
         this.isGoing = isGoing;
+    }
+
+    public boolean isFirstLogin() {
+        return firstLogin;
+    }
+
+    public void setFirstLogin(boolean firstLogin) {
+        this.firstLogin = firstLogin;
+    }
+
+    public Date getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(Date birthDay) {
+        this.birthDay = birthDay;
+    }
+
+    public boolean isOrphan() {
+        return orphan;
+    }
+
+    public void setOrphan(boolean orphan) {
+        this.orphan = orphan;
     }
 }
 

@@ -66,6 +66,36 @@
         android:layout_marginRight="10dp"
         android:paddingTop="3dp"
         android:textSize="16sp" />
+    <TextView
+        android:id="@+id/bday"
+        android:layout_width="200dp"
+        android:layout_height="26dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gender"
+        android:maxLines="1"
+        android:text="bday"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="3dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/orphan"
+        android:layout_width="200dp"
+        android:layout_height="26dip"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/isGoing"
+        android:maxLines="1"
+        android:text="isGoing"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textAlignment="textEnd"
+        android:layout_marginRight="10dp"
+        android:paddingTop="3dp"
+        android:textSize="16sp" />
+
 
     <Button
         android:id="@+id/takeQuiz"
@@ -75,7 +105,7 @@
         android:layout_marginRight="20dp"
         android:background="@color/orange"
         android:text="ASSESs"
-        android:layout_below="@id/gender"
+        android:layout_below="@id/bday"
         android:textColor="@color/dark_Blue"
         android:layout_marginTop="6dp" />
 
@@ -89,7 +119,7 @@
         android:layout_alignParentEnd="true"
         android:background="@color/orange"
         android:text="Set Going "
-        android:layout_below="@id/isGoing"
+        android:layout_below="@id/orphan"
         android:textColor="@color/dark_Blue"
         android:layout_marginTop="6dp" />
 

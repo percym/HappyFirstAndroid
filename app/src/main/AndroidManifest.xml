@@ -3,49 +3,51 @@
     package="zw.co.researchhub.happyfirst">
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreenActivity"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity android:name=".BDayActivity"></activity>
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
-                <action
-                    android:name="android.intent.action.MAIN"
-                    android:screenOrientation="portrait" />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".User.ManageStudentActivity"></activity>
+        <activity android:name=".User.ManageStudentActivity" />
         <activity
             android:name=".Welcome"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".RegisterActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GuestActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GeneralTip.ReadActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoggedInActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AssessmentActivity"
-            android:screenOrientation="portrait"></activity>
- <activity
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".User.ManageChildrenActivity"
-            android:screenOrientation="portrait"></activity>
-
-
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BDayActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -52,10 +52,20 @@ public class LoginActivity extends AppCompatActivity {
              String password = pass.getText().toString();
                  User loggedInUser = userDao.getUserByNameAndPassword(username,password);
                  if (loggedInUser != null) {
+
+                     //remove when going live
+                     loggedInUser.isFirstLogin();
                          Toast.makeText(this, "Login success", Toast.LENGTH_LONG).show();
-                         Intent i = new Intent(LoginActivity.this, LoggedInActivity.class);
-                         i.putExtra("loggedInUser", loggedInUser);
-                         startActivity(i);
+                         if ((loggedInUser.getRole().equals("STUDENT")) && (loggedInUser.isFirstLogin())){
+
+                             Intent i = new Intent(LoginActivity.this, BDayActivity.class);
+                             i.putExtra("loggedInUser", loggedInUser);
+                             startActivity(i);
+                         }else {
+                             Intent i = new Intent(LoginActivity.this, LoggedInActivity.class);
+                             i.putExtra("loggedInUser", loggedInUser);
+                             startActivity(i);
+                         }
 
                  }
          }

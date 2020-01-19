@@ -74,6 +74,9 @@ public class RegisterActivity extends AppCompatActivity {
              user.setRole(dropdownRole.getSelectedItem().toString());
              user.setGender(dropdownGender.getSelectedItem().toString());
              user.setIsGoing(false);
+             if (user.getRole().equals("STUDENT")){
+                 user.setFirstLogin(true);
+             }
 
              try {
                  userDao.insert(user);

@@ -60,6 +60,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             holder.lname.setText(user.getName());
             holder.gender.setText(user.getGender());
             holder.isGoing.setText(user.getIsGoing() == true ?"HAS STARTED":"HAS NOT STARTED");
+            holder.orphan.setText(user.isOrphan() == true ?"ORPHAN":"NOT ORPHAN");
 
             holder.takeQuiz.setOnClickListener(v -> {
                 Intent intent = new Intent(v.getContext(), AssessmentActivity.class);
@@ -96,6 +97,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         private TextView lname;
         private TextView gender;
         private TextView isGoing;
+        private TextView bday;
+        private TextView orphan;
         private Button takeQuiz;
         private Button setIsGoing;
 
@@ -106,6 +109,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             lname = itemView.findViewById(R.id.lname);
             gender = itemView.findViewById(R.id.gender);
             isGoing = itemView.findViewById(R.id.isGoing);
+            bday = itemView.findViewById(R.id.bday);
+            orphan = itemView.findViewById(R.id.orphan);
             takeQuiz = itemView.findViewById(R.id.takeQuiz);
             setIsGoing = itemView.findViewById(R.id.setGoing);
         }
