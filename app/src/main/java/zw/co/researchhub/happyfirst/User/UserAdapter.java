@@ -61,6 +61,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             holder.gender.setText(user.getGender());
             holder.isGoing.setText(user.getIsGoing() == true ?"HAS STARTED":"HAS NOT STARTED");
             holder.orphan.setText(user.isOrphan() == true ?"ORPHAN":"NOT ORPHAN");
+            holder.bday.setText(user.getBirthDay());
 
             holder.takeQuiz.setOnClickListener(v -> {
                 Intent intent = new Intent(v.getContext(), AssessmentActivity.class);

@@ -37,7 +37,7 @@ public class User implements Serializable {
     private  boolean firstLogin;
 
     @ColumnInfo(name = "birth_day")
-    private Date birthDay;
+    private String birthDay;
 
     @ColumnInfo(name ="orphan")
     private  boolean orphan;
@@ -106,11 +106,11 @@ public class User implements Serializable {
         this.firstLogin = firstLogin;
     }
 
-    public Date getBirthDay() {
+    public String getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(Date birthDay) {
+    public void setBirthDay(String birthDay) {
         this.birthDay = birthDay;
     }
 

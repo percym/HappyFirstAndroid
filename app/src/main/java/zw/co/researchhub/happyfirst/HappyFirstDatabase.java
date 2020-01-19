@@ -190,6 +190,4 @@ public abstract class HappyFirstDatabase extends RoomDatabase {
             return null;
         }
     }
-
-
 }
