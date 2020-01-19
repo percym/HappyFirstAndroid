@@ -68,7 +68,7 @@
         android:textSize="16sp" />
     <TextView
         android:id="@+id/bday"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="26dip"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/gender"
@@ -83,7 +83,7 @@
 
     <TextView
         android:id="@+id/orphan"
-        android:layout_width="200dp"
+        android:layout_width="100dp"
         android:layout_height="26dip"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/isGoing"
