@@ -31,12 +31,14 @@ public class CycleStartedActivity extends AppCompatActivity {
         submit.setOnClickListener(v -> {
         if (started.getSelectedItem().toString().equals("YES")) {
             loggedInUser.setIsGoing(true);
+            loggedInUser.setFirstLogin(false);
             userDao.update(loggedInUser);
             Intent i = new Intent(CycleStartedActivity.this, LoggedInActivity.class);
             i.putExtra("loggedInUser", loggedInUser);
             startActivity(i);
         }else{
             loggedInUser.setIsGoing(false);
+            loggedInUser.setFirstLogin(false);
             userDao.update(loggedInUser);
             Intent i = new Intent(CycleStartedActivity.this, LoggedInActivity.class);
             i.putExtra("loggedInUser", loggedInUser);

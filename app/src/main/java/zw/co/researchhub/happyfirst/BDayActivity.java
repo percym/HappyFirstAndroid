@@ -35,6 +35,7 @@ public class BDayActivity extends AppCompatActivity {
       loggedInUser =   (User) getIntent().getSerializableExtra("loggedInUser");
         submit.setOnClickListener(v -> {
             loggedInUser.setBirthDay(bday.toString());
+            loggedInUser.setFirstLogin(false);
             userDao.update(loggedInUser);
             Intent i = new Intent(BDayActivity.this, CycleStartedActivity.class);
             i.putExtra("loggedInUser", loggedInUser);
