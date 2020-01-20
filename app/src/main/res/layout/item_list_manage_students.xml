@@ -68,7 +68,7 @@
         android:textSize="16sp" />
     <TextView
         android:id="@+id/bday"
-        android:layout_width="300dp"
+        android:layout_width="230dp"
         android:layout_height="26dip"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/gender"

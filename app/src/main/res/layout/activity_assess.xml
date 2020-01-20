@@ -22,7 +22,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/icon"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -43,7 +43,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/chk1"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -62,7 +62,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/chk2"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -81,7 +81,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/chk3"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -100,7 +100,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/chk4"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -119,7 +119,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/chk5"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -132,40 +132,23 @@
         android:text="Mood swings (when your emotions "
         android:textColor="@color/orange" />
 
- <CheckBox
-        android:id="@+id/chk7"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_below="@id/chk6"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:id="@+id/q7"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_below="@id/q6"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:text="Mood swings (when your emotions "
-        android:textColor="@color/orange" />
 
 
     <CheckBox
         android:id="@+id/chk8"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_below="@id/chk7"
+        android:layout_below="@id/chk6"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/q8"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_below="@id/q7"
+        android:layout_below="@id/q6"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:text="Developing breasts "
@@ -177,7 +160,7 @@
         android:layout_height="20dp"
         android:layout_below="@id/chk8"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentEnd="true" />
 
     <TextView

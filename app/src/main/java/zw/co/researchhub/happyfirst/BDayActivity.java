@@ -8,6 +8,7 @@ import android.widget.DatePicker;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -39,7 +40,9 @@ public class BDayActivity extends AppCompatActivity {
 
       loggedInUser =   (User) getIntent().getSerializableExtra("loggedInUser");
         submit.setOnClickListener(v -> {
-            loggedInUser.setBirthDay(bday.toString());
+            String pattern = "yyyy-MM-dd";
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+            loggedInUser.setBirthDay(simpleDateFormat.format(bday));
             loggedInUser.setFirstLogin(false);
             userDao.update(loggedInUser);
             Intent i = new Intent(BDayActivity.this, CycleStartedActivity.class);

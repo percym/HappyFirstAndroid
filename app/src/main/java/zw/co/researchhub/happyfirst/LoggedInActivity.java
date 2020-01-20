@@ -11,10 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import zw.co.researchhub.happyfirst.SpecificTip.SpecificTipListFragment;
 import zw.co.researchhub.happyfirst.User.LoggedInGeneralTipListFragment;
 import zw.co.researchhub.happyfirst.User.LoggedInSpecificTipListFragment;
 import zw.co.researchhub.happyfirst.User.ManageChildrenActivity;
@@ -27,6 +24,7 @@ public class LoggedInActivity extends AppCompatActivity {
     private Button specificTipsButton;
     private Button manageStudentButton;
     private Button manageChildrenButton;
+    private Button self_asses;
     private FloatingActionButton askforhelp;
     private TextView name;
 
@@ -52,7 +50,6 @@ public class LoggedInActivity extends AppCompatActivity {
 
                 Intent i = new Intent(LoggedInActivity.this, ManageStudentActivity.class);
                 startActivity(i);
-                finish();
 
             });
         }
@@ -71,6 +68,15 @@ public class LoggedInActivity extends AppCompatActivity {
             String number = "0772204155";  // The number on which you want to send SMS
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
         });
+
+        self_asses = findViewById(R.id.self_asses);
+        if (loggedInUser.getRole().equals("STUDENT")) {
+            self_asses.setVisibility(View.VISIBLE);
+            self_asses.setOnClickListener(v -> {
+                Intent i = new Intent(LoggedInActivity.this, AssessmentActivity.class);
+                startActivity(i);
+            });
+        }
     }
 
     private void showFragment(final Fragment fragment, User user) {

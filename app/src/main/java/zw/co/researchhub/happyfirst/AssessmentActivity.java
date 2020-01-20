@@ -17,7 +17,6 @@ public class AssessmentActivity extends AppCompatActivity {
     private CheckBox chk4;
     private CheckBox chk5;
     private CheckBox chk6;
-    private CheckBox chk7;
     private CheckBox chk8;
     private CheckBox chk9;
     private  int isGoing = 0;
@@ -33,7 +32,6 @@ public class AssessmentActivity extends AppCompatActivity {
         chk4 = findViewById(R.id.chk4);
         chk5 = findViewById(R.id.chk5);
         chk6 = findViewById(R.id.chk6);
-        chk7 = findViewById(R.id.chk7);
         chk8 = findViewById(R.id.chk8);
         chk9 = findViewById(R.id.chk9);
 
@@ -54,9 +52,6 @@ public class AssessmentActivity extends AppCompatActivity {
                 isGoing = isGoing + 5;
             }
             if (chk6.isChecked()){
-                isGoing = isGoing + 5;
-            }
-            if (chk7.isChecked()){
                 isGoing = isGoing + 5;
             }
             if (chk8.isChecked()){

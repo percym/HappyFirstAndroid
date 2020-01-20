@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity
             android:name=".SplashScreenActivity"
             android:screenOrientation="portrait"
@@ -52,6 +50,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".TrackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddStudentActivity"
             android:screenOrientation="portrait" />
 
     </application>
